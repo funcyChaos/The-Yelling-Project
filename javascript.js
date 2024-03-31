@@ -4,7 +4,7 @@ const countdown = setInterval(()=>{
 	const timeDiff = targetDate - now
 	if(timeDiff <= 0){
 		clearInterval(countdown)
-		document.getElementById("countdown").innerHTML = "Countdown Finished!"
+		document.getElementById("countdown").innerHTML = "Yelling Time!"
 		return
 	}
 	const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24))
