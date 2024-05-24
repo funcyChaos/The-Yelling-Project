@@ -1,4 +1,4 @@
-const targetDate = new Date("2024-04-01T18:00:00-08:00")
+const targetDate = new Date("2024-06-01T18:00:00-08:00")
 const countdown = setInterval(()=>{
 	const now = new Date()
 	const timeDiff = targetDate - now
