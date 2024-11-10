@@ -2,7 +2,6 @@ const date 								= new Date()
 const thisMonth 					= date.getMonth()
 const nextMonth						= ((thisMonth + 1) % 12) + 1
 const year 								= date.getFullYear() + (nextMonth === 1 ? 1 : 0)
-console.log(nextMonth, year)
 const targetDate					= new Date(`${year}-${nextMonth}-01T18:00:00-08:00`)
 const countdown						= setInterval(()=>{
 	const now 							= new Date()
