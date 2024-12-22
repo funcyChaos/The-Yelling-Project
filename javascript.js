@@ -1,8 +1,10 @@
 const date 								= new Date()
 const thisMonth 					= date.getMonth()
-const nextMonth						= ((thisMonth + 1) % 12) + 1
+let nextMonth							= ((thisMonth + 1) % 12) + 1
 const year 								= date.getFullYear() + (nextMonth === 1 ? 1 : 0)
+nextMonth = String(nextMonth).padStart(2, "0")
 const targetDate					= new Date(`${year}-${nextMonth}-01T18:00:00-08:00`)
+console.log(targetDate)
 const countdown						= setInterval(()=>{
 	const now 							= new Date()
 	const timeDiff 					= targetDate - now
@@ -16,5 +18,5 @@ const countdown						= setInterval(()=>{
 	const seconds 					= Math.floor((timeDiff % (1000 * 60)) / 1000)
 	const minutes 					= Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60))
 	const countdownDisplay	= days + "d " + hours + "h " + minutes + "m " + seconds + "s"
-document.getElementById("countdown").innerHTML = countdownDisplay
+	document.getElementById("countdown").innerHTML = countdownDisplay
 }, 1000)
